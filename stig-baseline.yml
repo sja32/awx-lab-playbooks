@@ -15,9 +15,9 @@
         state: present
 
     - name: Allow SSH
-      ufw:
+      community.general.ufw:
         rule: allow
-        name: OpenSSH
+        port: 22
 
     - name: Enable UFW
       ufw:
